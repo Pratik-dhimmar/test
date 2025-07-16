@@ -19,3 +19,10 @@ class SweetShopManager:
 
     def view_sweets(self):
         return self.sweets
+    
+    # sweet_shop/sweet_shop_manager.py (continued)
+    def delete_sweet(self, sweet_id):
+        initial_len = len(self.sweets)
+        self.sweets = [sweet for sweet in self.sweets if sweet['id'] != sweet_id]
+        if len(self.sweets) == initial_len:
+            raise ValueError(f"Sweet with ID {sweet_id} not found.")
