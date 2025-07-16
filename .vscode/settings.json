@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./sweet_shop"
+    ]
+}
